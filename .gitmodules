@@ -7,3 +7,10 @@
 [submodule "openwrt-sdk-22.03.3-x86-64_gcc-11.2.0_musl.Linux-x86_64/package/v2ray-plugin"]
 	path = openwrt-sdk-22.03.3-x86-64_gcc-11.2.0_musl.Linux-x86_64/package/v2ray-plugin
 	url = https://github.com/chenhw2/openwrt-v2ray-plugin.git
+[submodule "openwrt-sdk-22.03.3-x86-64_gcc-11.2.0_musl.Linux-x86_64/package/luci-app-shadowsocks"]
+	path = openwrt-sdk-22.03.3-x86-64_gcc-11.2.0_musl.Linux-x86_64/package/luci-app-shadowsocks
+	url = https://github.com/shadowsocks/luci-app-shadowsocks.git
+	branch = v1.9.1
+[submodule "openwrt-sdk-22.03.3-x86-64_gcc-11.2.0_musl.Linux-x86_64/package/shadowsocks-libev"]
+	path = openwrt-sdk-22.03.3-x86-64_gcc-11.2.0_musl.Linux-x86_64/package/shadowsocks-libev
+	url = https://github.com/shadowsocks/openwrt-shadowsocks.git

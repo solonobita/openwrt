@@ -1,7 +1,5 @@
 name: ipk-build-bot
 on:
-  push:
-    branches: [ main ]      
   schedule:
     - cron: '0 9 * * *'
 
@@ -17,8 +15,8 @@ jobs:
       run: |
         pushd openwrt-sdk-22.03.3-x86-64_gcc-11.2.0_musl.Linux-x86_64
         # make package/shadowsocks-libev/{clean,compile} V=99 -j64
-        make package/chinadns-ng/{clean,compile} V=99 -j64
-        make package/v2ray-plugin/{clean,compile} V=99 -j64
+        make package/chinadns-ng/compile V=99 -j64
+        make package/v2ray-plugin/compile V=99 -j64
         popd
     - name: Check changes
       id: check_changes

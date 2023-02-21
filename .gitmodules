@@ -1,0 +1,3 @@
+[submodule "openwrt-sdk-22.03.3-x86-64_gcc-11.2.0_musl.Linux-x86_64/package/feeds"]
+	path = openwrt-sdk-22.03.3-x86-64_gcc-11.2.0_musl.Linux-x86_64/package/feeds
+	url = https://github.com/shadowsocks/openwrt-feeds.git

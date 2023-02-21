@@ -1,0 +1,8 @@
+kernel/linux
+shadowsocks-libev
+toolchain
+feeds/base/mbedtls
+feeds/packages/c-ares
+feeds/packages/libev
+feeds/packages/libsodium
+feeds/packages/pcre

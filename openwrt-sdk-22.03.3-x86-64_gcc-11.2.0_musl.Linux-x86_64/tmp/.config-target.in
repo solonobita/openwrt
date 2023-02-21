@@ -1,0 +1,1739 @@
+config DEFAULT_TARGET_x86_geode
+	bool
+	depends on TARGET_PER_DEVICE_ROOTFS
+	default y if TARGET_x86_geode
+	select DEFAULT_base-files if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ca-bundle if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dropbear if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_fstools if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libgcc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libustream-wolfssl if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_logd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mtd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_netifd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_opkg if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uclient-fetch if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urandom-seed if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urngd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_busybox if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd-ujail if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dnsmasq if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_firewall4 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_nftables if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-nft-offload if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcp6c if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcpd-ipv6only if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp-mod-pppoe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_partx-utils if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mkf2fs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_e2fsprogs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-button-hotplug if TARGET_PER_DEVICE_ROOTFS
+config DEFAULT_TARGET_x86_generic
+	bool
+	depends on TARGET_PER_DEVICE_ROOTFS
+	default y if TARGET_x86_generic
+	select DEFAULT_base-files if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ca-bundle if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dropbear if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_fstools if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libgcc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libustream-wolfssl if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_logd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mtd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_netifd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_opkg if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uclient-fetch if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urandom-seed if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urngd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_busybox if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd-ujail if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dnsmasq if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_firewall4 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_nftables if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-nft-offload if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcp6c if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcpd-ipv6only if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp-mod-pppoe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_partx-utils if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mkf2fs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_e2fsprogs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-button-hotplug if TARGET_PER_DEVICE_ROOTFS
+config DEFAULT_TARGET_x86_legacy
+	bool
+	depends on TARGET_PER_DEVICE_ROOTFS
+	default y if TARGET_x86_legacy
+	select DEFAULT_base-files if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ca-bundle if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dropbear if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_fstools if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libgcc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libustream-wolfssl if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_logd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mtd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_netifd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_opkg if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uclient-fetch if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urandom-seed if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urngd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_busybox if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd-ujail if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dnsmasq if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_firewall4 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_nftables if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-nft-offload if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcp6c if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcpd-ipv6only if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp-mod-pppoe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_partx-utils if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mkf2fs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_e2fsprogs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-button-hotplug if TARGET_PER_DEVICE_ROOTFS
+config DEFAULT_TARGET_x86_64
+	bool
+	depends on TARGET_PER_DEVICE_ROOTFS
+	default y if TARGET_x86_64
+	select DEFAULT_base-files if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ca-bundle if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dropbear if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_fstools if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libgcc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libustream-wolfssl if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_logd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mtd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_netifd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_opkg if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uclient-fetch if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urandom-seed if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urngd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_busybox if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd-ujail if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dnsmasq if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_firewall4 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_nftables if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-nft-offload if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcp6c if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcpd-ipv6only if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp-mod-pppoe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_partx-utils if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mkf2fs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_e2fsprogs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-button-hotplug if TARGET_PER_DEVICE_ROOTFS
+choice
+	prompt "Target System"
+	default TARGET_ath79
+	reset if !DEVEL
+	
+config TARGET_x86
+	bool "x86"
+	select HAS_SUBTARGETS
+
+
+endchoice
+
+choice
+	prompt "Subtarget" if HAS_SUBTARGETS
+
+config TARGET_x86_generic
+	bool "Generic"
+	select LINUX_5_10 if !TESTING_KERNEL
+	select LINUX_5_10 if TESTING_KERNEL
+	depends on TARGET_x86
+	select AUDIO_SUPPORT
+	select USES_BOOT_PART
+	select DISPLAY_SUPPORT
+	select USES_EXT4
+	select HAS_FPU
+	select GPIO_SUPPORT
+	select PCI_SUPPORT
+	select PCIE_SUPPORT
+	select PCMCIA_SUPPORT
+	select USES_ROOTFS_PART
+	select RTC_SUPPORT
+	select USES_SQUASHFS
+	select USES_TARGZ
+	select USB_SUPPORT
+	select VIRTIO_SUPPORT
+	select i386
+	select HAS_DEVICES
+	help
+	  Build firmware images for modern x86 based boards with CPUs
+	  supporting at least the Intel Pentium 4 instruction set with
+	  MMX, SSE and SSE2.
+
+
+config TARGET_x86_legacy
+	bool "Legacy"
+	select LINUX_5_10 if !TESTING_KERNEL
+	select LINUX_5_10 if TESTING_KERNEL
+	depends on TARGET_x86
+	select USES_BOOT_PART
+	select DISPLAY_SUPPORT
+	select USES_EXT4
+	select HAS_FPU
+	select PCI_SUPPORT
+	select PCIE_SUPPORT
+	select PCMCIA_SUPPORT
+	select USES_ROOTFS_PART
+	select RTC_SUPPORT
+	select USES_SQUASHFS
+	select USES_TARGZ
+	select USB_SUPPORT
+	select i386
+	select HAS_DEVICES
+	help
+	  Build firmware images for legacy x86 based boards
+	  (e.g : Soekris, ...)
+
+
+config TARGET_x86_geode
+	bool "AMD Geode based systems"
+	select LINUX_5_10 if !TESTING_KERNEL
+	select LINUX_5_10 if TESTING_KERNEL
+	depends on TARGET_x86
+	select USES_BOOT_PART
+	select DISPLAY_SUPPORT
+	select USES_EXT4
+	select HAS_FPU
+	select GPIO_SUPPORT
+	select PCI_SUPPORT
+	select PCMCIA_SUPPORT
+	select USES_ROOTFS_PART
+	select RTC_SUPPORT
+	select USES_SQUASHFS
+	select USES_TARGZ
+	select USB_SUPPORT
+	select i386
+	select HAS_DEVICES
+	help
+	  Build firmware images for AMD Geode GX/LX based systems (net5501, alix, geos)
+
+
+config TARGET_x86_64
+	bool "x86_64"
+	select LINUX_5_10 if !TESTING_KERNEL
+	select LINUX_5_10 if TESTING_KERNEL
+	depends on TARGET_x86
+	select USES_BOOT_PART
+	select DISPLAY_SUPPORT
+	select USES_EXT4
+	select HAS_FPU
+	select GPIO_SUPPORT
+	select PCI_SUPPORT
+	select PCIE_SUPPORT
+	select PCMCIA_SUPPORT
+	select USES_ROOTFS_PART
+	select RTC_SUPPORT
+	select USES_SQUASHFS
+	select USES_TARGZ
+	select USB_SUPPORT
+	select VIRTIO_SUPPORT
+	select x86_64
+	select HAS_DEVICES
+	help
+	  Build images for 64 bit systems including virtualized guests.
+
+
+endchoice
+
+choice
+	prompt "Target Profile"
+	default TARGET_MULTI_PROFILE if BUILDBOT
+
+	default TARGET_x86_generic_DEVICE_generic if TARGET_x86_generic && !BUILDBOT
+	default TARGET_x86_legacy_DEVICE_generic if TARGET_x86_legacy && !BUILDBOT
+	default TARGET_x86_geode_DEVICE_generic if TARGET_x86_geode && !BUILDBOT
+	default TARGET_x86_64_DEVICE_generic if TARGET_x86_64 && !BUILDBOT
+
+config TARGET_MULTI_PROFILE
+	bool "Multiple devices"
+	depends on HAS_DEVICES
+	help
+	Instead of only building a single image, or all images, this allows you
+	to select images to be built for multiple devices in one build.
+
+config TARGET_x86_generic_DEVICE_generic
+	bool "Generic x86"
+	depends on TARGET_x86_generic
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_ca-bundle
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_e2fsprogs
+	select DEFAULT_firewall4
+	select DEFAULT_fstools
+	select DEFAULT_kmod-3c59x
+	select DEFAULT_kmod-8139too
+	select DEFAULT_kmod-button-hotplug
+	select DEFAULT_kmod-e100
+	select DEFAULT_kmod-e1000
+	select DEFAULT_kmod-forcedeth
+	select DEFAULT_kmod-fs-vfat
+	select DEFAULT_kmod-natsemi
+	select DEFAULT_kmod-ne2k-pci
+	select DEFAULT_kmod-nft-offload
+	select DEFAULT_kmod-pcnet32
+	select DEFAULT_kmod-r8169
+	select DEFAULT_kmod-sis900
+	select DEFAULT_kmod-tg3
+	select DEFAULT_kmod-via-rhine
+	select DEFAULT_kmod-via-velocity
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_libustream-wolfssl
+	select DEFAULT_logd
+	select DEFAULT_mkf2fs
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_nftables
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd-ipv6only
+	select DEFAULT_opkg
+	select DEFAULT_partx-utils
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_procd
+	select DEFAULT_procd-ujail
+	select DEFAULT_uci
+	select DEFAULT_uclient-fetch
+	select DEFAULT_urandom-seed
+	select DEFAULT_urngd
+	help
+	  Build firmware images for Generic x86
+	  
+config TARGET_x86_legacy_DEVICE_generic
+	bool "Generic x86/legacy"
+	depends on TARGET_x86_legacy
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_ca-bundle
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_e2fsprogs
+	select DEFAULT_firewall4
+	select DEFAULT_fstools
+	select DEFAULT_kmod-3c59x
+	select DEFAULT_kmod-8139too
+	select DEFAULT_kmod-button-hotplug
+	select DEFAULT_kmod-e100
+	select DEFAULT_kmod-e1000
+	select DEFAULT_kmod-forcedeth
+	select DEFAULT_kmod-natsemi
+	select DEFAULT_kmod-ne2k-pci
+	select DEFAULT_kmod-nft-offload
+	select DEFAULT_kmod-pcnet32
+	select DEFAULT_kmod-r8169
+	select DEFAULT_kmod-sis900
+	select DEFAULT_kmod-tg3
+	select DEFAULT_kmod-via-rhine
+	select DEFAULT_kmod-via-velocity
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_libustream-wolfssl
+	select DEFAULT_logd
+	select DEFAULT_mkf2fs
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_nftables
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd-ipv6only
+	select DEFAULT_opkg
+	select DEFAULT_partx-utils
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_procd
+	select DEFAULT_procd-ujail
+	select DEFAULT_uci
+	select DEFAULT_uclient-fetch
+	select DEFAULT_urandom-seed
+	select DEFAULT_urngd
+	help
+	  Build firmware images for Generic x86/legacy
+	  
+config TARGET_x86_geode_DEVICE_generic
+	bool "Generic x86/Geode"
+	depends on TARGET_x86_geode
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_ca-bundle
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_e2fsprogs
+	select DEFAULT_firewall4
+	select DEFAULT_fstools
+	select DEFAULT_kmod-button-hotplug
+	select DEFAULT_kmod-crypto-cbc
+	select DEFAULT_kmod-crypto-ecb
+	select DEFAULT_kmod-crypto-hw-geode
+	select DEFAULT_kmod-ledtrig-gpio
+	select DEFAULT_kmod-nft-offload
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_libustream-wolfssl
+	select DEFAULT_logd
+	select DEFAULT_mkf2fs
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_nftables
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd-ipv6only
+	select DEFAULT_opkg
+	select DEFAULT_partx-utils
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_procd
+	select DEFAULT_procd-ujail
+	select DEFAULT_uci
+	select DEFAULT_uclient-fetch
+	select DEFAULT_urandom-seed
+	select DEFAULT_urngd
+	help
+	  Build firmware images for Generic x86/Geode
+	  
+config TARGET_x86_geode_DEVICE_geos
+	bool "Traverse Technologies Geos"
+	depends on TARGET_x86_geode
+	select DEFAULT_base-files
+	select DEFAULT_br2684ctl
+	select DEFAULT_busybox
+	select DEFAULT_ca-bundle
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_e2fsprogs
+	select DEFAULT_firewall4
+	select DEFAULT_flashrom
+	select DEFAULT_fstools
+	select DEFAULT_kmod-button-hotplug
+	select DEFAULT_kmod-crypto-cbc
+	select DEFAULT_kmod-crypto-ecb
+	select DEFAULT_kmod-crypto-hw-geode
+	select DEFAULT_kmod-hwmon-lm90
+	select DEFAULT_kmod-ledtrig-gpio
+	select DEFAULT_kmod-mppe
+	select DEFAULT_kmod-nft-offload
+	select DEFAULT_kmod-pppoa
+	select DEFAULT_kmod-usb-ohci-pci
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_libustream-wolfssl
+	select DEFAULT_linux-atm
+	select DEFAULT_logd
+	select DEFAULT_mkf2fs
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_nftables
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd-ipv6only
+	select DEFAULT_opkg
+	select DEFAULT_partx-utils
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoa
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_pppdump
+	select DEFAULT_pppstats
+	select DEFAULT_procd
+	select DEFAULT_procd-ujail
+	select DEFAULT_soloscli
+	select DEFAULT_tc
+	select DEFAULT_uci
+	select DEFAULT_uclient-fetch
+	select DEFAULT_urandom-seed
+	select DEFAULT_urngd
+	help
+	  Build firmware images for Traverse Technologies Geos
+	  
+config TARGET_x86_64_DEVICE_generic
+	bool "Generic x86/64"
+	depends on TARGET_x86_64
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_ca-bundle
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_e2fsprogs
+	select DEFAULT_firewall4
+	select DEFAULT_fstools
+	select DEFAULT_kmod-amazon-ena
+	select DEFAULT_kmod-amd-xgbe
+	select DEFAULT_kmod-bnx2
+	select DEFAULT_kmod-button-hotplug
+	select DEFAULT_kmod-e1000
+	select DEFAULT_kmod-e1000e
+	select DEFAULT_kmod-forcedeth
+	select DEFAULT_kmod-fs-vfat
+	select DEFAULT_kmod-igb
+	select DEFAULT_kmod-igc
+	select DEFAULT_kmod-ixgbe
+	select DEFAULT_kmod-nft-offload
+	select DEFAULT_kmod-r8169
+	select DEFAULT_kmod-tg3
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_libustream-wolfssl
+	select DEFAULT_logd
+	select DEFAULT_mkf2fs
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_nftables
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd-ipv6only
+	select DEFAULT_opkg
+	select DEFAULT_partx-utils
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_procd
+	select DEFAULT_procd-ujail
+	select DEFAULT_uci
+	select DEFAULT_uclient-fetch
+	select DEFAULT_urandom-seed
+	select DEFAULT_urngd
+	help
+	  Build firmware images for Generic x86/64
+	  
+endchoice
+
+menu "Target Devices"
+	depends on TARGET_MULTI_PROFILE
+
+	config TARGET_ALL_PROFILES
+		bool "Enable all profiles by default"
+		default BUILDBOT
+
+	config TARGET_PER_DEVICE_ROOTFS
+		bool "Use a per-device root filesystem that adds profile packages"
+		default BUILDBOT
+		help
+		When disabled, all device packages from all selected devices
+		will be included in all images by default. (Marked as <*>) You will
+		still be able to manually deselect any/all packages.
+		When enabled, each device builds it's own image, including only the
+		profile packages for that device.  (Marked as {M}) You will be able
+		to change a package to included in all images by marking as {*}, but
+		will not be able to disable a profile package completely.
+		
+		To get the most use of this setting, you must set in a .config stub
+		before calling "make defconfig".  Selecting TARGET_MULTI_PROFILE and
+		then manually selecting (via menuconfig for instance) this option
+		will have pre-defaulted all profile packages to included, making this
+		option appear to have had no effect.
+
+menuconfig TARGET_DEVICE_x86_generic_DEVICE_generic
+	bool "Generic x86"
+	depends on TARGET_x86_generic
+	default y if TARGET_ALL_PROFILES
+	select DEFAULT_base-files if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_base-files if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_busybox if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_busybox if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ca-bundle if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ca-bundle if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dnsmasq if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_dnsmasq if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dropbear if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_dropbear if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_e2fsprogs if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_e2fsprogs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_firewall4 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_firewall4 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_fstools if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_fstools if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-3c59x if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-3c59x if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-8139too if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-8139too if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-button-hotplug if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-button-hotplug if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-e100 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-e100 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-e1000 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-e1000 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-forcedeth if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-forcedeth if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-fs-vfat if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-fs-vfat if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-natsemi if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-natsemi if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-ne2k-pci if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-ne2k-pci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-nft-offload if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-nft-offload if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-pcnet32 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-pcnet32 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-r8169 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-r8169 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-sis900 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-sis900 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-tg3 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-tg3 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-via-rhine if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-via-rhine if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-via-velocity if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-via-velocity if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libgcc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libgcc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libustream-wolfssl if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libustream-wolfssl if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_logd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_logd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mkf2fs if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_mkf2fs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mtd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_mtd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_netifd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_netifd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_nftables if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_nftables if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcp6c if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_odhcp6c if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcpd-ipv6only if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_odhcpd-ipv6only if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_opkg if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_opkg if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_partx-utils if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_partx-utils if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp-mod-pppoe if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp-mod-pppoe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_procd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd-ujail if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_procd-ujail if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uci if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_uci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uclient-fetch if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_uclient-fetch if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urandom-seed if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_urandom-seed if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urngd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_urngd if TARGET_PER_DEVICE_ROOTFS
+
+
+	config TARGET_DEVICE_PACKAGES_x86_generic_DEVICE_generic
+		string "Generic x86 additional packages"
+		default ""
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on TARGET_DEVICE_x86_generic_DEVICE_generic
+
+menuconfig TARGET_DEVICE_x86_legacy_DEVICE_generic
+	bool "Generic x86/legacy"
+	depends on TARGET_x86_legacy
+	default y if TARGET_ALL_PROFILES
+	select DEFAULT_base-files if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_base-files if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_busybox if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_busybox if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ca-bundle if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ca-bundle if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dnsmasq if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_dnsmasq if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dropbear if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_dropbear if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_e2fsprogs if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_e2fsprogs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_firewall4 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_firewall4 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_fstools if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_fstools if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-3c59x if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-3c59x if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-8139too if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-8139too if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-button-hotplug if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-button-hotplug if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-e100 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-e100 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-e1000 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-e1000 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-forcedeth if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-forcedeth if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-natsemi if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-natsemi if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-ne2k-pci if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-ne2k-pci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-nft-offload if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-nft-offload if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-pcnet32 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-pcnet32 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-r8169 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-r8169 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-sis900 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-sis900 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-tg3 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-tg3 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-via-rhine if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-via-rhine if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-via-velocity if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-via-velocity if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libgcc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libgcc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libustream-wolfssl if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libustream-wolfssl if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_logd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_logd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mkf2fs if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_mkf2fs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mtd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_mtd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_netifd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_netifd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_nftables if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_nftables if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcp6c if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_odhcp6c if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcpd-ipv6only if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_odhcpd-ipv6only if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_opkg if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_opkg if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_partx-utils if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_partx-utils if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp-mod-pppoe if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp-mod-pppoe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_procd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd-ujail if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_procd-ujail if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uci if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_uci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uclient-fetch if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_uclient-fetch if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urandom-seed if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_urandom-seed if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urngd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_urngd if TARGET_PER_DEVICE_ROOTFS
+
+
+	config TARGET_DEVICE_PACKAGES_x86_legacy_DEVICE_generic
+		string "Generic x86/legacy additional packages"
+		default ""
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on TARGET_DEVICE_x86_legacy_DEVICE_generic
+
+menuconfig TARGET_DEVICE_x86_geode_DEVICE_generic
+	bool "Generic x86/Geode"
+	depends on TARGET_x86_geode
+	default y if TARGET_ALL_PROFILES
+	select DEFAULT_base-files if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_base-files if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_busybox if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_busybox if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ca-bundle if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ca-bundle if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dnsmasq if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_dnsmasq if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dropbear if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_dropbear if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_e2fsprogs if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_e2fsprogs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_firewall4 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_firewall4 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_fstools if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_fstools if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-button-hotplug if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-button-hotplug if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-crypto-cbc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-crypto-cbc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-crypto-ecb if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-crypto-ecb if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-crypto-hw-geode if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-crypto-hw-geode if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-ledtrig-gpio if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-ledtrig-gpio if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-nft-offload if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-nft-offload if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libgcc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libgcc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libustream-wolfssl if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libustream-wolfssl if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_logd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_logd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mkf2fs if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_mkf2fs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mtd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_mtd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_netifd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_netifd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_nftables if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_nftables if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcp6c if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_odhcp6c if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcpd-ipv6only if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_odhcpd-ipv6only if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_opkg if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_opkg if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_partx-utils if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_partx-utils if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp-mod-pppoe if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp-mod-pppoe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_procd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd-ujail if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_procd-ujail if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uci if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_uci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uclient-fetch if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_uclient-fetch if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urandom-seed if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_urandom-seed if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urngd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_urngd if TARGET_PER_DEVICE_ROOTFS
+
+
+	config TARGET_DEVICE_PACKAGES_x86_geode_DEVICE_generic
+		string "Generic x86/Geode additional packages"
+		default ""
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on TARGET_DEVICE_x86_geode_DEVICE_generic
+
+menuconfig TARGET_DEVICE_x86_geode_DEVICE_geos
+	bool "Traverse Technologies Geos"
+	depends on TARGET_x86_geode
+	default y if TARGET_ALL_PROFILES
+	select DEFAULT_base-files if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_base-files if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_br2684ctl if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_br2684ctl if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_busybox if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_busybox if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ca-bundle if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ca-bundle if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dnsmasq if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_dnsmasq if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dropbear if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_dropbear if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_e2fsprogs if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_e2fsprogs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_firewall4 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_firewall4 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_flashrom if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_flashrom if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_fstools if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_fstools if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-button-hotplug if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-button-hotplug if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-crypto-cbc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-crypto-cbc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-crypto-ecb if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-crypto-ecb if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-crypto-hw-geode if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-crypto-hw-geode if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-hwmon-lm90 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-hwmon-lm90 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-ledtrig-gpio if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-ledtrig-gpio if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-mppe if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-mppe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-nft-offload if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-nft-offload if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-pppoa if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-pppoa if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-usb-ohci-pci if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-usb-ohci-pci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libgcc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libgcc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libustream-wolfssl if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libustream-wolfssl if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_linux-atm if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_linux-atm if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_logd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_logd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mkf2fs if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_mkf2fs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mtd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_mtd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_netifd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_netifd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_nftables if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_nftables if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcp6c if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_odhcp6c if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcpd-ipv6only if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_odhcpd-ipv6only if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_opkg if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_opkg if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_partx-utils if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_partx-utils if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp-mod-pppoa if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp-mod-pppoa if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp-mod-pppoe if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp-mod-pppoe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_pppdump if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_pppdump if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_pppstats if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_pppstats if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_procd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd-ujail if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_procd-ujail if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_soloscli if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_soloscli if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_tc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_tc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uci if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_uci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uclient-fetch if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_uclient-fetch if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urandom-seed if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_urandom-seed if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urngd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_urngd if TARGET_PER_DEVICE_ROOTFS
+
+
+	config TARGET_DEVICE_PACKAGES_x86_geode_DEVICE_geos
+		string "Traverse Technologies Geos additional packages"
+		default ""
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on TARGET_DEVICE_x86_geode_DEVICE_geos
+
+menuconfig TARGET_DEVICE_x86_64_DEVICE_generic
+	bool "Generic x86/64"
+	depends on TARGET_x86_64
+	default y if TARGET_ALL_PROFILES
+	select DEFAULT_base-files if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_base-files if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_busybox if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_busybox if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ca-bundle if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ca-bundle if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dnsmasq if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_dnsmasq if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_dropbear if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_dropbear if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_e2fsprogs if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_e2fsprogs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_firewall4 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_firewall4 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_fstools if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_fstools if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-amazon-ena if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-amazon-ena if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-amd-xgbe if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-amd-xgbe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-bnx2 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-bnx2 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-button-hotplug if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-button-hotplug if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-e1000 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-e1000 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-e1000e if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-e1000e if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-forcedeth if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-forcedeth if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-fs-vfat if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-fs-vfat if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-igb if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-igb if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-igc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-igc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-ixgbe if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-ixgbe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-nft-offload if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-nft-offload if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-r8169 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-r8169 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_kmod-tg3 if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_kmod-tg3 if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libgcc if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libgcc if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_libustream-wolfssl if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_libustream-wolfssl if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_logd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_logd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mkf2fs if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_mkf2fs if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_mtd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_mtd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_netifd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_netifd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_nftables if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_nftables if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcp6c if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_odhcp6c if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_odhcpd-ipv6only if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_odhcpd-ipv6only if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_opkg if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_opkg if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_partx-utils if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_partx-utils if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_ppp-mod-pppoe if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_ppp-mod-pppoe if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_procd if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_procd-ujail if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_procd-ujail if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uci if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_uci if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_uclient-fetch if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_uclient-fetch if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urandom-seed if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_urandom-seed if TARGET_PER_DEVICE_ROOTFS
+	select DEFAULT_urngd if !TARGET_PER_DEVICE_ROOTFS
+	select MODULE_DEFAULT_urngd if TARGET_PER_DEVICE_ROOTFS
+
+
+	config TARGET_DEVICE_PACKAGES_x86_64_DEVICE_generic
+		string "Generic x86/64 additional packages"
+		default ""
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on TARGET_DEVICE_x86_64_DEVICE_generic
+
+
+endmenu
+
+config HAS_SUBTARGETS
+	bool
+
+config HAS_DEVICES
+	bool
+
+config TARGET_BOARD
+	string
+
+		default "x86" if TARGET_x86
+config TARGET_SUBTARGET
+	string
+	default "generic" if !HAS_SUBTARGETS
+
+		default "generic" if TARGET_x86_generic
+		default "legacy" if TARGET_x86_legacy
+		default "geode" if TARGET_x86_geode
+		default "64" if TARGET_x86_64
+config TARGET_PROFILE
+	string
+	default "DEVICE_generic" if TARGET_x86_generic_DEVICE_generic
+	default "DEVICE_generic" if TARGET_x86_legacy_DEVICE_generic
+	default "DEVICE_generic" if TARGET_x86_geode_DEVICE_generic
+	default "DEVICE_geos" if TARGET_x86_geode_DEVICE_geos
+	default "DEVICE_generic" if TARGET_x86_64_DEVICE_generic
+
+config TARGET_ARCH_PACKAGES
+	string
+	
+		default "i386_pentium4" if TARGET_x86_generic
+		default "i386_pentium-mmx" if TARGET_x86_legacy
+		default "i386_pentium-mmx" if TARGET_x86_geode
+		default "x86_64" if TARGET_x86_64
+
+config DEFAULT_TARGET_OPTIMIZATION
+	string
+	default "-Os -pipe -march=pentium4" if TARGET_x86_generic
+	default "-Os -pipe -march=pentium-mmx" if TARGET_x86_legacy
+	default "-Os -pipe -march=pentium-mmx" if TARGET_x86_geode
+	default "-Os -pipe" if TARGET_x86_64
+	default "-Os -pipe -funit-at-a-time"
+
+config CPU_TYPE
+	string
+	default "pentium4" if TARGET_x86_generic
+	default "pentium-mmx" if TARGET_x86_legacy
+	default "pentium-mmx" if TARGET_x86_geode
+	default " " if TARGET_x86_64
+	default ""
+
+config LINUX_5_10
+	bool
+
+	config DEFAULT_base-files
+		bool
+
+	config MODULE_DEFAULT_base-files
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_base-files
+		select PACKAGE_base-files
+
+	config DEFAULT_br2684ctl
+		bool
+
+	config MODULE_DEFAULT_br2684ctl
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_br2684ctl
+		select PACKAGE_br2684ctl
+
+	config DEFAULT_busybox
+		bool
+
+	config MODULE_DEFAULT_busybox
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_busybox
+		select PACKAGE_busybox
+
+	config DEFAULT_ca-bundle
+		bool
+
+	config MODULE_DEFAULT_ca-bundle
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_ca-bundle
+		select PACKAGE_ca-bundle
+
+	config DEFAULT_dnsmasq
+		bool
+
+	config MODULE_DEFAULT_dnsmasq
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_dnsmasq
+		select PACKAGE_dnsmasq
+
+	config DEFAULT_dropbear
+		bool
+
+	config MODULE_DEFAULT_dropbear
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_dropbear
+		select PACKAGE_dropbear
+
+	config DEFAULT_e2fsprogs
+		bool
+
+	config MODULE_DEFAULT_e2fsprogs
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_e2fsprogs
+		select PACKAGE_e2fsprogs
+
+	config DEFAULT_firewall4
+		bool
+
+	config MODULE_DEFAULT_firewall4
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_firewall4
+		select PACKAGE_firewall4
+
+	config DEFAULT_flashrom
+		bool
+
+	config MODULE_DEFAULT_flashrom
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_flashrom
+		select PACKAGE_flashrom
+
+	config DEFAULT_fstools
+		bool
+
+	config MODULE_DEFAULT_fstools
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_fstools
+		select PACKAGE_fstools
+
+	config DEFAULT_kmod-3c59x
+		bool
+
+	config MODULE_DEFAULT_kmod-3c59x
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-3c59x
+		select PACKAGE_kmod-3c59x
+
+	config DEFAULT_kmod-8139too
+		bool
+
+	config MODULE_DEFAULT_kmod-8139too
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-8139too
+		select PACKAGE_kmod-8139too
+
+	config DEFAULT_kmod-amazon-ena
+		bool
+
+	config MODULE_DEFAULT_kmod-amazon-ena
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-amazon-ena
+		select PACKAGE_kmod-amazon-ena
+
+	config DEFAULT_kmod-amd-xgbe
+		bool
+
+	config MODULE_DEFAULT_kmod-amd-xgbe
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-amd-xgbe
+		select PACKAGE_kmod-amd-xgbe
+
+	config DEFAULT_kmod-bnx2
+		bool
+
+	config MODULE_DEFAULT_kmod-bnx2
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-bnx2
+		select PACKAGE_kmod-bnx2
+
+	config DEFAULT_kmod-button-hotplug
+		bool
+
+	config MODULE_DEFAULT_kmod-button-hotplug
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-button-hotplug
+		select PACKAGE_kmod-button-hotplug
+
+	config DEFAULT_kmod-crypto-cbc
+		bool
+
+	config MODULE_DEFAULT_kmod-crypto-cbc
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-crypto-cbc
+		select PACKAGE_kmod-crypto-cbc
+
+	config DEFAULT_kmod-crypto-ecb
+		bool
+
+	config MODULE_DEFAULT_kmod-crypto-ecb
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-crypto-ecb
+		select PACKAGE_kmod-crypto-ecb
+
+	config DEFAULT_kmod-crypto-hw-geode
+		bool
+
+	config MODULE_DEFAULT_kmod-crypto-hw-geode
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-crypto-hw-geode
+		select PACKAGE_kmod-crypto-hw-geode
+
+	config DEFAULT_kmod-e100
+		bool
+
+	config MODULE_DEFAULT_kmod-e100
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-e100
+		select PACKAGE_kmod-e100
+
+	config DEFAULT_kmod-e1000
+		bool
+
+	config MODULE_DEFAULT_kmod-e1000
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-e1000
+		select PACKAGE_kmod-e1000
+
+	config DEFAULT_kmod-e1000e
+		bool
+
+	config MODULE_DEFAULT_kmod-e1000e
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-e1000e
+		select PACKAGE_kmod-e1000e
+
+	config DEFAULT_kmod-forcedeth
+		bool
+
+	config MODULE_DEFAULT_kmod-forcedeth
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-forcedeth
+		select PACKAGE_kmod-forcedeth
+
+	config DEFAULT_kmod-fs-vfat
+		bool
+
+	config MODULE_DEFAULT_kmod-fs-vfat
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-fs-vfat
+		select PACKAGE_kmod-fs-vfat
+
+	config DEFAULT_kmod-hwmon-lm90
+		bool
+
+	config MODULE_DEFAULT_kmod-hwmon-lm90
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-hwmon-lm90
+		select PACKAGE_kmod-hwmon-lm90
+
+	config DEFAULT_kmod-igb
+		bool
+
+	config MODULE_DEFAULT_kmod-igb
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-igb
+		select PACKAGE_kmod-igb
+
+	config DEFAULT_kmod-igc
+		bool
+
+	config MODULE_DEFAULT_kmod-igc
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-igc
+		select PACKAGE_kmod-igc
+
+	config DEFAULT_kmod-ixgbe
+		bool
+
+	config MODULE_DEFAULT_kmod-ixgbe
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-ixgbe
+		select PACKAGE_kmod-ixgbe
+
+	config DEFAULT_kmod-ledtrig-gpio
+		bool
+
+	config MODULE_DEFAULT_kmod-ledtrig-gpio
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-ledtrig-gpio
+		select PACKAGE_kmod-ledtrig-gpio
+
+	config DEFAULT_kmod-mppe
+		bool
+
+	config MODULE_DEFAULT_kmod-mppe
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-mppe
+		select PACKAGE_kmod-mppe
+
+	config DEFAULT_kmod-natsemi
+		bool
+
+	config MODULE_DEFAULT_kmod-natsemi
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-natsemi
+		select PACKAGE_kmod-natsemi
+
+	config DEFAULT_kmod-ne2k-pci
+		bool
+
+	config MODULE_DEFAULT_kmod-ne2k-pci
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-ne2k-pci
+		select PACKAGE_kmod-ne2k-pci
+
+	config DEFAULT_kmod-nft-offload
+		bool
+
+	config MODULE_DEFAULT_kmod-nft-offload
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-nft-offload
+		select PACKAGE_kmod-nft-offload
+
+	config DEFAULT_kmod-pcnet32
+		bool
+
+	config MODULE_DEFAULT_kmod-pcnet32
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-pcnet32
+		select PACKAGE_kmod-pcnet32
+
+	config DEFAULT_kmod-pppoa
+		bool
+
+	config MODULE_DEFAULT_kmod-pppoa
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-pppoa
+		select PACKAGE_kmod-pppoa
+
+	config DEFAULT_kmod-r8169
+		bool
+
+	config MODULE_DEFAULT_kmod-r8169
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-r8169
+		select PACKAGE_kmod-r8169
+
+	config DEFAULT_kmod-sis900
+		bool
+
+	config MODULE_DEFAULT_kmod-sis900
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-sis900
+		select PACKAGE_kmod-sis900
+
+	config DEFAULT_kmod-tg3
+		bool
+
+	config MODULE_DEFAULT_kmod-tg3
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-tg3
+		select PACKAGE_kmod-tg3
+
+	config DEFAULT_kmod-usb-ohci-pci
+		bool
+
+	config MODULE_DEFAULT_kmod-usb-ohci-pci
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-usb-ohci-pci
+		select PACKAGE_kmod-usb-ohci-pci
+
+	config DEFAULT_kmod-via-rhine
+		bool
+
+	config MODULE_DEFAULT_kmod-via-rhine
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-via-rhine
+		select PACKAGE_kmod-via-rhine
+
+	config DEFAULT_kmod-via-velocity
+		bool
+
+	config MODULE_DEFAULT_kmod-via-velocity
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_kmod-via-velocity
+		select PACKAGE_kmod-via-velocity
+
+	config DEFAULT_libc
+		bool
+
+	config MODULE_DEFAULT_libc
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_libc
+		select PACKAGE_libc
+
+	config DEFAULT_libgcc
+		bool
+
+	config MODULE_DEFAULT_libgcc
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_libgcc
+		select PACKAGE_libgcc
+
+	config DEFAULT_libustream-wolfssl
+		bool
+
+	config MODULE_DEFAULT_libustream-wolfssl
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_libustream-wolfssl
+		select PACKAGE_libustream-wolfssl
+
+	config DEFAULT_linux-atm
+		bool
+
+	config MODULE_DEFAULT_linux-atm
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_linux-atm
+		select PACKAGE_linux-atm
+
+	config DEFAULT_logd
+		bool
+
+	config MODULE_DEFAULT_logd
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_logd
+		select PACKAGE_logd
+
+	config DEFAULT_mkf2fs
+		bool
+
+	config MODULE_DEFAULT_mkf2fs
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_mkf2fs
+		select PACKAGE_mkf2fs
+
+	config DEFAULT_mtd
+		bool
+
+	config MODULE_DEFAULT_mtd
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_mtd
+		select PACKAGE_mtd
+
+	config DEFAULT_netifd
+		bool
+
+	config MODULE_DEFAULT_netifd
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_netifd
+		select PACKAGE_netifd
+
+	config DEFAULT_nftables
+		bool
+
+	config MODULE_DEFAULT_nftables
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_nftables
+		select PACKAGE_nftables
+
+	config DEFAULT_odhcp6c
+		bool
+
+	config MODULE_DEFAULT_odhcp6c
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_odhcp6c
+		select PACKAGE_odhcp6c
+
+	config DEFAULT_odhcpd-ipv6only
+		bool
+
+	config MODULE_DEFAULT_odhcpd-ipv6only
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_odhcpd-ipv6only
+		select PACKAGE_odhcpd-ipv6only
+
+	config DEFAULT_opkg
+		bool
+
+	config MODULE_DEFAULT_opkg
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_opkg
+		select PACKAGE_opkg
+
+	config DEFAULT_partx-utils
+		bool
+
+	config MODULE_DEFAULT_partx-utils
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_partx-utils
+		select PACKAGE_partx-utils
+
+	config DEFAULT_ppp
+		bool
+
+	config MODULE_DEFAULT_ppp
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_ppp
+		select PACKAGE_ppp
+
+	config DEFAULT_ppp-mod-pppoa
+		bool
+
+	config MODULE_DEFAULT_ppp-mod-pppoa
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_ppp-mod-pppoa
+		select PACKAGE_ppp-mod-pppoa
+
+	config DEFAULT_ppp-mod-pppoe
+		bool
+
+	config MODULE_DEFAULT_ppp-mod-pppoe
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_ppp-mod-pppoe
+		select PACKAGE_ppp-mod-pppoe
+
+	config DEFAULT_pppdump
+		bool
+
+	config MODULE_DEFAULT_pppdump
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_pppdump
+		select PACKAGE_pppdump
+
+	config DEFAULT_pppstats
+		bool
+
+	config MODULE_DEFAULT_pppstats
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_pppstats
+		select PACKAGE_pppstats
+
+	config DEFAULT_procd
+		bool
+
+	config MODULE_DEFAULT_procd
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_procd
+		select PACKAGE_procd
+
+	config DEFAULT_procd-ujail
+		bool
+
+	config MODULE_DEFAULT_procd-ujail
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_procd-ujail
+		select PACKAGE_procd-ujail
+
+	config DEFAULT_soloscli
+		bool
+
+	config MODULE_DEFAULT_soloscli
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_soloscli
+		select PACKAGE_soloscli
+
+	config DEFAULT_tc
+		bool
+
+	config MODULE_DEFAULT_tc
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_tc
+		select PACKAGE_tc
+
+	config DEFAULT_uci
+		bool
+
+	config MODULE_DEFAULT_uci
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_uci
+		select PACKAGE_uci
+
+	config DEFAULT_uclient-fetch
+		bool
+
+	config MODULE_DEFAULT_uclient-fetch
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_uclient-fetch
+		select PACKAGE_uclient-fetch
+
+	config DEFAULT_urandom-seed
+		bool
+
+	config MODULE_DEFAULT_urandom-seed
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_urandom-seed
+		select PACKAGE_urandom-seed
+
+	config DEFAULT_urngd
+		bool
+
+	config MODULE_DEFAULT_urngd
+		tristate
+		depends on TARGET_PER_DEVICE_ROOTFS
+		depends on m
+		default m if DEFAULT_urngd
+		select PACKAGE_urngd
+

@@ -1,4 +1,5 @@
 kernel/linux
+luci-app-shadowsocks
 shadowsocks-libev
 toolchain
 feeds/base/mbedtls

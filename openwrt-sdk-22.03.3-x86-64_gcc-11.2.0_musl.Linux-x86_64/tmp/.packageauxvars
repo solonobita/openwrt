@@ -703,3 +703,5 @@ Package/shadowsocks-libev/subdir = base
 Package/shadowsocks-libev/depends = libc libcares libev libmbedtls libpcre libpthread librt libsodium
 Package/shadowsocks-libev-server/subdir = base
 Package/shadowsocks-libev-server/depends = libc libcares libev libmbedtls libpcre libpthread librt libsodium
+Package/v2ray-plugin/subdir = base
+Package/v2ray-plugin/depends = libc libpthread librt

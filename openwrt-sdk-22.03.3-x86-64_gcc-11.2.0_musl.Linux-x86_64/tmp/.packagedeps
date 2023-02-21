@@ -848,6 +848,7 @@ package-$(CONFIG_PACKAGE_libgfortran) += toolchain
 package-$(CONFIG_PACKAGE_libgomp) += toolchain
 package-$(CONFIG_PACKAGE_ldd) += toolchain
 package-$(CONFIG_PACKAGE_ldconfig) += toolchain
+package-$(CONFIG_PACKAGE_v2ray-plugin) += v2ray-plugin
 
 $(curdir)/feeds/packages/c-ares/compile += $(curdir)/toolchain/compile $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)
 $(curdir)/chinadns-ng/compile += $(curdir)/toolchain/compile $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)
@@ -857,3 +858,4 @@ $(curdir)/luci-app-shadowsocks/compile += $(curdir)/toolchain/compile $(if $(CON
 $(curdir)/feeds/base/mbedtls/compile += $(curdir)/toolchain/compile $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)
 $(curdir)/feeds/packages/pcre/compile += $(curdir)/toolchain/compile $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)
 $(curdir)/shadowsocks-libev/compile += $(curdir)/feeds/base/mbedtls/compile $(curdir)/feeds/packages/c-ares/compile $(curdir)/feeds/packages/libev/compile $(curdir)/feeds/packages/libsodium/compile $(curdir)/feeds/packages/pcre/compile $(curdir)/toolchain/compile $(if $(CONFIG_SHADOWSOCKS_WITH_CARES),,$(curdir)/feeds/packages/c-ares/compile) $(if $(CONFIG_SHADOWSOCKS_WITH_EV),,$(curdir)/feeds/packages/libev/compile) $(if $(CONFIG_SHADOWSOCKS_WITH_MBEDTLS),,$(curdir)/feeds/base/mbedtls/compile) $(if $(CONFIG_SHADOWSOCKS_WITH_PCRE),,$(curdir)/feeds/packages/pcre/compile) $(if $(CONFIG_SHADOWSOCKS_WITH_SODIUM),,$(curdir)/feeds/packages/libsodium/compile) $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)
+$(curdir)/v2ray-plugin/compile += $(curdir)/toolchain/compile $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)

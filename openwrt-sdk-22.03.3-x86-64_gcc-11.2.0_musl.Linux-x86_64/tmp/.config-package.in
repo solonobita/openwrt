@@ -8,12 +8,12 @@ menu "Base system"
 		tristate "libasan...................... Runtime library for AddressSanitizer in GCC"
 		default y if DEFAULT_libasan
 		default m if ALL||ALL_NONSHARED
-		depends on !mips64
-		select PACKAGE_librt
-		depends on !mips64el
 		select PACKAGE_libstdcpp
+		depends on !mips64
 		depends on USE_GLIBC
+		depends on !mips64el
 		depends on !arc
+		select PACKAGE_librt
 		help
 		 Runtime library for AddressSanitizer in GCC
 		 http://gcc.gnu.org/
@@ -184,14 +184,14 @@ menu "Base system"
 		tristate "liblsan......................... Runtime library for LeakSanitizer in GCC"
 		default y if DEFAULT_liblsan
 		default m if ALL||ALL_NONSHARED
-		select PACKAGE_libstdcpp
-		depends on !mips64el
-		depends on !mips64
-		select PACKAGE_librt
 		depends on !mipsel
-		depends on !arc
+		select PACKAGE_libstdcpp
+		depends on !mips64
 		depends on USE_GLIBC
+		depends on !arc
+		depends on !mips64el
 		depends on !mips
+		select PACKAGE_librt
 		help
 		 Runtime library for LeakSanitizer in GCC
 		 http://gcc.gnu.org/
@@ -332,14 +332,14 @@ menu "Base system"
 		tristate "libtsan....................... Runtime library for ThreadSanitizer in GCC"
 		default y if DEFAULT_libtsan
 		default m if ALL||ALL_NONSHARED
-		depends on !arc
 		depends on USE_GLIBC
-		depends on !mips
-		depends on !mips64el
-		select PACKAGE_libstdcpp
-		select PACKAGE_librt
 		depends on !mips64
+		select PACKAGE_libstdcpp
 		depends on !mipsel
+		select PACKAGE_librt
+		depends on !arc
+		depends on !mips64el
+		depends on !mips
 		help
 		 Runtime library for ThreadSanitizer in GCC
 		 http://gcc.gnu.org/
@@ -368,12 +368,12 @@ menu "Base system"
 		tristate "libubsan........... Runtime library for UndefinedBehaviorSanitizer in GCC"
 		default y if DEFAULT_libubsan
 		default m if ALL||ALL_NONSHARED
-		depends on !arc
 		depends on USE_GLIBC
-		depends on !mips64el
+		depends on !mips64
 		select PACKAGE_libstdcpp
 		select PACKAGE_librt
-		depends on !mips64
+		depends on !mips64el
+		depends on !arc
 		help
 		 Runtime library for UndefinedBehaviorSanitizer in GCC
 		 http://gcc.gnu.org/
@@ -465,9 +465,9 @@ menu "SSL"
 		tristate "libmbedtls........................................ Embedded SSL (library)"
 		default y if DEFAULT_libmbedtls
 		default m if ALL
-		select PACKAGE_librt if USE_GLIBC
 		select PACKAGE_libpthread if USE_GLIBC
 		select PACKAGE_libc
+		select PACKAGE_librt if USE_GLIBC
 		help
 		 The aim of the mbedtls project is to provide a quality, open-source
 		 cryptographic library written in C and targeted at embedded systems.
@@ -501,9 +501,9 @@ endmenu
 		tristate "libcares.. Library for asyncronous DNS Requests (including name resolves)"
 		default y if DEFAULT_libcares
 		default m if ALL
-		select PACKAGE_libpthread if USE_GLIBC
-		select PACKAGE_libc
 		select PACKAGE_librt if USE_GLIBC
+		select PACKAGE_libc
+		select PACKAGE_libpthread if USE_GLIBC
 		help
 		 c-ares is a C library for asynchronous DNS requests (including name resolves)
 		 
@@ -517,9 +517,9 @@ endmenu
 		tristate "libev........................................ High-performance event loop"
 		default y if DEFAULT_libev
 		default m if ALL
-		select PACKAGE_librt if USE_GLIBC
-		select PACKAGE_libc
 		select PACKAGE_libpthread if USE_GLIBC
+		select PACKAGE_libc
+		select PACKAGE_librt if USE_GLIBC
 		help
 		 A full-featured and high-performance event loop that is loosely modelled after
 		  libevent, but without its limitations and bugs.
@@ -530,9 +530,9 @@ endmenu
 		tristate "libpcre..................... A Perl Compatible Regular Expression library"
 		default y if DEFAULT_libpcre
 		default m if ALL
+		select PACKAGE_librt if USE_GLIBC
 		select PACKAGE_libc
 		select PACKAGE_libpthread if USE_GLIBC
-		select PACKAGE_librt if USE_GLIBC
 		help
 		 A Perl Compatible Regular Expression library
 		 http://www.pcre.org/
@@ -543,9 +543,9 @@ endmenu
 		default y if DEFAULT_libsodium
 		default m if ALL
 		select PACKAGE_libpthread if USE_GLIBC
-		select PACKAGE_libc
 		select PACKAGE_libpthread
 		select PACKAGE_librt if USE_GLIBC
+		select PACKAGE_libc
 		help
 		 NaCl (pronounced "salt") is a new easy-to-use high-speed software library for network communication, encryption, decryption, signatures, etc.
 		   NaCl's goal is to provide all of the core operations needed to build higher-level cryptographic tools.
@@ -573,11 +573,11 @@ menu "3. Applications"
 		tristate "luci-app-shadowsocks.................. LuCI Support for shadowsocks-libev"
 		default y if DEFAULT_luci-app-shadowsocks
 		default m if ALL
-		select PACKAGE_libc
-		select PACKAGE_libpthread if USE_GLIBC
 		select PACKAGE_ipset
-		select PACKAGE_iptables
 		select PACKAGE_librt if USE_GLIBC
+		select PACKAGE_libc
+		select PACKAGE_iptables
+		select PACKAGE_libpthread if USE_GLIBC
 		help
 		 LuCI Support for shadowsocks-libev.
 		 Jian Chang <aa65535@live.com>
@@ -587,9 +587,9 @@ menu "3. Applications"
 		default y if DEFAULT_luci-app-shadowsocks-without-ipset
 		default m if ALL
 		select PACKAGE_libpthread if USE_GLIBC
+		select PACKAGE_iptables
 		select PACKAGE_libc
 		select PACKAGE_librt if USE_GLIBC
-		select PACKAGE_iptables
 		help
 		 LuCI Support for shadowsocks-libev.
 		 Jian Chang <aa65535@live.com>
@@ -603,9 +603,9 @@ menu "Network"
 		tristate "chinadns-ng... ChinaDNS Next Generation, refactoring with epoll and ipset"
 		default y if DEFAULT_chinadns-ng
 		default m if ALL
+		select PACKAGE_libc
 		select PACKAGE_ipset
 		select PACKAGE_librt if USE_GLIBC
-		select PACKAGE_libc
 		select PACKAGE_libpthread if USE_GLIBC
 		help
 		 ChinaDNS Next Generation, refactoring with epoll and ipset.
@@ -616,15 +616,15 @@ menu "Network"
 		tristate "shadowsocks-libev....................... Lightweight Secured Socks5 Proxy"
 		default y if DEFAULT_shadowsocks-libev
 		default m if ALL
-		select PACKAGE_libc
 		select PACKAGE_libmbedtls if !SHADOWSOCKS_WITH_MBEDTLS
+		select PACKAGE_libpthread
 		select PACKAGE_libpthread if USE_GLIBC
-		select PACKAGE_libsodium if !SHADOWSOCKS_WITH_SODIUM
-		select PACKAGE_libcares if !SHADOWSOCKS_WITH_CARES
-		select PACKAGE_libev if !SHADOWSOCKS_WITH_EV
+		select PACKAGE_libc
 		select PACKAGE_libpcre if !SHADOWSOCKS_WITH_PCRE
 		select PACKAGE_librt if USE_GLIBC
-		select PACKAGE_libpthread
+		select PACKAGE_libcares if !SHADOWSOCKS_WITH_CARES
+		select PACKAGE_libev if !SHADOWSOCKS_WITH_EV
+		select PACKAGE_libsodium if !SHADOWSOCKS_WITH_SODIUM
 		help
 		 Shadowsocks-libev is a lightweight secured socks5 proxy for embedded devices and low end boxes.
 		 https://github.com/shadowsocks/shadowsocks-libev
@@ -634,15 +634,15 @@ menu "Network"
 		tristate "shadowsocks-libev-server................ Lightweight Secured Socks5 Proxy"
 		default y if DEFAULT_shadowsocks-libev-server
 		default m if ALL
-		select PACKAGE_libc
-		select PACKAGE_libmbedtls if !SHADOWSOCKS_WITH_MBEDTLS
 		select PACKAGE_libpthread if USE_GLIBC
-		select PACKAGE_libcares if !SHADOWSOCKS_WITH_CARES
-		select PACKAGE_libpcre if !SHADOWSOCKS_WITH_PCRE
 		select PACKAGE_libpthread
+		select PACKAGE_libmbedtls if !SHADOWSOCKS_WITH_MBEDTLS
+		select PACKAGE_libsodium if !SHADOWSOCKS_WITH_SODIUM
 		select PACKAGE_libev if !SHADOWSOCKS_WITH_EV
 		select PACKAGE_librt if USE_GLIBC
-		select PACKAGE_libsodium if !SHADOWSOCKS_WITH_SODIUM
+		select PACKAGE_libcares if !SHADOWSOCKS_WITH_CARES
+		select PACKAGE_libpcre if !SHADOWSOCKS_WITH_PCRE
+		select PACKAGE_libc
 		help
 		 Shadowsocks-libev is a lightweight secured socks5 proxy for embedded devices and low end boxes.
 		 https://github.com/shadowsocks/shadowsocks-libev
@@ -678,6 +678,18 @@ menu "Network"
 					default y
 			endmenu
 	endmenu
+
+	config PACKAGE_v2ray-plugin
+		tristate "v2ray-plugin............... SIP003 plugin for shadowsocks, based on v2ray"
+		default y if DEFAULT_v2ray-plugin
+		default m if ALL
+		select PACKAGE_libc
+		select PACKAGE_librt if USE_GLIBC
+		select PACKAGE_libpthread if USE_GLIBC
+		help
+		 Yet another SIP003 plugin for shadowsocks, based on v2ray
+		 https://github.com/shadowsocks/v2ray-plugin
+		 honwen <https://github.com/honwen>
 
 endmenu
 
@@ -743,10 +755,10 @@ menu "Utilities"
 		tristate "mbedtls-util.................................... Embedded SSL (utilities)"
 		default y if DEFAULT_mbedtls-util
 		default m if ALL
-		select PACKAGE_librt if USE_GLIBC
-		select PACKAGE_libmbedtls
-		select PACKAGE_libpthread if USE_GLIBC
 		select PACKAGE_libc
+		select PACKAGE_librt if USE_GLIBC
+		select PACKAGE_libpthread if USE_GLIBC
+		select PACKAGE_libmbedtls
 		help
 		 The aim of the mbedtls project is to provide a quality, open-source
 		 cryptographic library written in C and targeted at embedded systems.

@@ -1,0 +1,11 @@
+chinadns-ng
+kernel/linux
+luci-app-shadowsocks
+shadowsocks-libev
+toolchain
+v2ray-plugin
+feeds/base/mbedtls
+feeds/packages/c-ares
+feeds/packages/libev
+feeds/packages/libsodium
+feeds/packages/pcre

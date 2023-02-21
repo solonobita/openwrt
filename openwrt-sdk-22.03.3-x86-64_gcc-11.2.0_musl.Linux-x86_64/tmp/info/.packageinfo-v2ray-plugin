@@ -1,0 +1,21 @@
+Source-Makefile: package/v2ray-plugin/Makefile
+
+Package: v2ray-plugin
+Version: 5.4.0-20230220
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: SIP003 plugin for shadowsocks, based on v2ray
+Maintainer: honwen <https://github.com/honwen>
+Source: v2ray-plugin-linux--v5.4.0.tar.gz
+Type: ipkg
+Description: 	Yet another SIP003 plugin for shadowsocks, based on v2ray
+https://github.com/shadowsocks/v2ray-plugin
+honwen <https://github.com/honwen>
+@@
+
+

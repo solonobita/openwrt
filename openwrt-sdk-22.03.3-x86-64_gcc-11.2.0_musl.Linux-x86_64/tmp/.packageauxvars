@@ -1,3 +1,5 @@
+Package/chinadns-ng/subdir = base
+Package/chinadns-ng/depends = ipset libc libpthread librt
 Package/kmod-3c59x/depends = kmod-mii
 Package/kmod-8139cp/depends = kmod-mii
 Package/kmod-8139too/depends = kmod-mii

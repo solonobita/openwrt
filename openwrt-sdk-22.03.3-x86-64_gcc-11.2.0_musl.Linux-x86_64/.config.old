@@ -2937,6 +2937,18 @@ CONFIG_LIBSODIUM_MINIMAL=y
 # end of Libraries
 
 #
+# LuCI
+#
+
+#
+# 3. Applications
+#
+CONFIG_PACKAGE_luci-app-shadowsocks=m
+CONFIG_PACKAGE_luci-app-shadowsocks-without-ipset=m
+# end of 3. Applications
+# end of LuCI
+
+#
 # Network
 #
 CONFIG_PACKAGE_shadowsocks-libev=y

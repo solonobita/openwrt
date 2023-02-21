@@ -1,4 +1,5 @@
 package-$(CONFIG_PACKAGE_libcares) += feeds/packages/c-ares
+package-$(CONFIG_PACKAGE_chinadns-ng) += chinadns-ng
 package-$(CONFIG_PACKAGE_libev) += feeds/packages/libev
 package-$(CONFIG_PACKAGE_libsodium) += feeds/packages/libsodium
 package-$(CONFIG_PACKAGE_kmod-aoe) += kernel/linux
@@ -849,6 +850,7 @@ package-$(CONFIG_PACKAGE_ldd) += toolchain
 package-$(CONFIG_PACKAGE_ldconfig) += toolchain
 
 $(curdir)/feeds/packages/c-ares/compile += $(curdir)/toolchain/compile $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)
+$(curdir)/chinadns-ng/compile += $(curdir)/toolchain/compile $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)
 $(curdir)/feeds/packages/libev/compile += $(curdir)/toolchain/compile $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)
 $(curdir)/feeds/packages/libsodium/compile += $(curdir)/toolchain/compile $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)
 $(curdir)/luci-app-shadowsocks/compile += $(curdir)/toolchain/compile $(if $(CONFIG_USE_GLIBC),$(curdir)/toolchain/compile)

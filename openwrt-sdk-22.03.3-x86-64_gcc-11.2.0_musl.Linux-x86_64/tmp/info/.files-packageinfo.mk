@@ -1,4 +1,5 @@
 DEPS_package/kernel/linux/Makefile=modules/*.mk $(SUBTARGET_MODULES) $(TOPDIR)/include/netfilter.mk
+$(eval $(call PackageDir,chinadns-ng,chinadns-ng,))
 $(eval $(call PackageDir,kernel_linux,kernel/linux,))
 $(eval $(call PackageDir,luci-app-shadowsocks,luci-app-shadowsocks,))
 $(eval $(call PackageDir,shadowsocks-libev,shadowsocks-libev,))

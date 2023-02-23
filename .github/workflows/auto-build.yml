@@ -26,9 +26,9 @@ jobs:
       id: check_changes
       run: |
         if git status openwrt-sdk-22.03.3-x86-64_gcc-11.2.0_musl.Linux-x86_64/bin -s | grep -q "??"; then
-          echo "changed=false" >> $GITHUB_OUTPUT
-        else
           echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
         fi
     - name: Commit files
       env:
